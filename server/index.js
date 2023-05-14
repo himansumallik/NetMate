@@ -10,7 +10,7 @@ import path, { dirname } from "path";
 import { fileURLToPath } from "url";
 import authRoutes from "./routes/auth.js"
 import { error } from "console";
-import { register } from "./controllers/auth.js";
+import register from "./controllers/auth.js";
 
 /* MIDDLEWARE CONFIGURATION*/
 const __filename = fileURLToPath(import.meta.url);
