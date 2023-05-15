@@ -11,6 +11,7 @@ import { fileURLToPath } from "url";
 import authRoutes from "./routes/auth.js"
 import { error } from "console";
 import register from "./controllers/auth.js";
+import userRoutes from "./routes/users.js"
 
 /* MIDDLEWARE CONFIGURATION*/
 const __filename = fileURLToPath(import.meta.url);
@@ -41,6 +42,7 @@ app.post("/auth/register", upload.single("picture"), register);
 
 /* ROUTES */
 app.use("/auth", authRoutes);
+app.use("/users", userRoutes);
 
 
 /* MONGOOSE SETUP */
