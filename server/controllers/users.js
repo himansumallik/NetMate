@@ -2,7 +2,7 @@ import express from "express";
 import User from "../models/User.js";
 
 /* READ */
-const getUser = async(req, res) => {
+export const getUser = async(req, res) => {
     try{
         const { id } = req.params;
         const user = await User.findById(id);
@@ -12,7 +12,7 @@ const getUser = async(req, res) => {
     }
 } 
 
-const getUserFriends = async(req, res) => {
+export const getUserFriends = async(req, res) => {
     try{
         const { id } = req.params;
         const user = await User.findById(id);
@@ -34,7 +34,7 @@ const getUserFriends = async(req, res) => {
 
 /* UPDATE */
 
-const addRemoveFriends  = async(req, res) => {
+export const addRemoveFriends  = async(req, res) => {
     try{
 
         const {id, friendId} = req.params;
@@ -67,4 +67,3 @@ const addRemoveFriends  = async(req, res) => {
     }
 }
 
-export default {getUser, getUserFriends, addRemoveFriends}
