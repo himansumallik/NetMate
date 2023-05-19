@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken";
 import User from "../models/User.js"
 
 /* REGISTER USER */
-const register = async(req, res) => {
+export const register = async(req, res) => {
     try{
         const {
             firstName,
@@ -37,7 +37,7 @@ const register = async(req, res) => {
 }
 
 /* LOGGING IN */
-const login = async(req, res) => {
+export const login = async(req, res) => {
     try{
         const {email, password} = req.body;
         const user = await User.findOne({ email: email });
@@ -54,4 +54,3 @@ const login = async(req, res) => {
     }
 }
 
-export default register;
