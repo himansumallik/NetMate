@@ -1,10 +1,10 @@
 import { Box } from "@mui/material";
-import Navbar from "scenes/navbar";
+import LoginPage from "scenes/loginPage/index";
 
 const Homepage = () => {
     return (
         <Box>
-            <Navbar/>
+            <LoginPage/>
         </Box>
     )
 }
